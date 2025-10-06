@@ -59,16 +59,7 @@ Bioskop Adrian XXI adalah aplikasi pemesanan tiket bioskop berbasis console yang
 ## 📊 Contoh Output
 
 ### 1. Menu Utama
-
-SELAMAT DATANG DI BIOSKOP ADRIAN XXI
- 
-1. Lihat Daftar Film
-2. Pesan Tiket
-3. Lihat Rekap Pemesanan
-4. Keluar
-   
-Pilih menu (1-4): 
-
+<img width="359" height="183" alt="image" src="https://github.com/user-attachments/assets/04a9edc2-d98d-4272-bf4d-5773764f238f" />
 
 ### 2. Daftar Film
 
