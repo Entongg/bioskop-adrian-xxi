@@ -72,11 +72,11 @@ Pilih menu (1-4):
 
 DAFTAR FILM YANG SEDANG TAYANG
 
-No  | Judul          | Genre      | Harga
-1   | Venom 3        | Action     | Rp 50,000
-2   | Inside Out 2   | Animation  | Rp 45,000
-3   | Conjuring 4    | Horror     | Rp 55,000
-
+| No | Judul Film | Genre | Harga Tiket |
+|----|------------|-------|-------------|
+| 1  | Venom 3 | Action | Rp 50.000 |
+| 2  | Inside Out 2 | Animation | Rp 45.000 |
+| 3  | Conjuring 4 | Horror | Rp 55.000 |
 
 ### 3. Proses Pemesanan
 
@@ -102,18 +102,24 @@ PEMESANAN BERHASIL!
 ### 4. Detail Pemesanan
 DETAIL PEMESANAN
 
-Nama Pelanggan  : Adrian
-Film            : Inside Out 2
-Jadwal Tayang   : 19:00 (Malam)
-Jumlah Tiket    : 4
-Total Bayar     : Rp 194,400
+Nama Pelanggan : Adrian
+
+Film           : Inside Out 2
+
+Jadwal Tayang  : 19:00 (Malam)
+
+Jumlah Tiket   : 4
+
+Total Bayar    : Rp  194.400
 
 ### 5. Rekap Semua Pemesanan
-                          REKAP PESANAN
-No  | Nama    | Film         | Jadwal        | Jumlah | Total
-1   | Adrian  | Inside Out 2 | 19:00 (Malam) | 4      | Rp 194,400
-2   | Sarah   | Venom 3      | 15:30 (Sore)  | 2      | Rp 110,000
-3   | Budi    | Conjuring 4  | 12:00 (Siang) | 1      | Rp 55,000
+REKAP PESANAN
+
+| No | Nama | Film | Jadwal | Jumlah | Total |
+|---|------|------|---------|--------|-------|
+| 1 | Adrian | Inside Out 2 | 19:00 (Malam) | 4 | Rp 194.400 |
+| 2 | Sarah | Venom 3 | 15:30 (Sore) | 2 | Rp 110.000 |
+| 3 | Budi | Conjuring 4 | 12:00 (Siang) | 1 | Rp 55.000 |
 
 Total Pemesanan : 3
 
