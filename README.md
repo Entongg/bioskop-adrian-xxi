@@ -1,126 +1,130 @@
-Bioskop Adrian XXI - Sistem Pemesanan Tiket Bioskop
-    Bioskop Adrian XXI adalah aplikasi pemesanan tiket bioskop berbasis console yang dikembangkan menggunakan Java. 
-Aplikasi ini memungkinkan pengguna untuk melihat daftar film, memesan tiket, dan melihat riwayat pemesanan dengan antarmuka yang user-friendly.
+# Bioskop Adrian XXI - Sistem Pemesanan Tiket Bioskop
 
-Fitur
-📺 Lihat Daftar Film - Menampilkan film yang sedang tayang beserta harga
-🎫 Pesan Tiket - Proses pemesanan tiket dengan pilihan film, jadwal, dan jumlah
-📊 Rekap Pemesanan - Melihat semua transaksi yang telah dilakukan
-💰 Sistem Diskon - Diskon 10% untuk pembelian lebih dari 3 tiket
-⏰ Variasi Harga - Harga berbeda berdasarkan jam tayang (Siang, Sore, Malam)
-🔄 Menu Interaktif - Navigasi yang mudah dengan sistem menu berulang
+Bioskop Adrian XXI adalah aplikasi pemesanan tiket bioskop berbasis console yang dikembangkan menggunakan Java. Aplikasi ini memungkinkan pengguna untuk melihat daftar film, memesan tiket, dan melihat riwayat pemesanan dengan antarmuka yang user-friendly.
 
-Diagram Class
-BioskopApp (Main Class)
-│
-├── Manages: Film[] daftarFilm
-├── Manages: Jadwal[] daftarJadwal  
-├── Manages: ArrayList<Pemesanan> riwayatPemesanan
-└── Methods: main(), menu system
-    │
-    ├── Film
-    │   ├── judul: String
-    │   ├── genre: String
-    │   ├── hargaDasar: double
-    │   ├── getJudul(), getGenre(), getHargaDasar()
-    │   └── getInfoFilm(): String
-    │
-    ├── Jadwal
-    │   ├── jamTayang: String
-    │   ├── faktorHarga: double
-    │   ├── getJamTayang(), getFaktorHarga()
-    │   └── getInfoJadwal(): String
-    │
-    └── Pemesanan
-        ├── namaPelanggan: String
-        ├── film: Film           // Composition
-        ├── jadwal: Jadwal       // Composition
-        ├── jumlahTiket: int
-        ├── DISKON: double = 0.1
-        ├── hitungTotalBayar(): double
-        ├── getDetailPemesanan(): String
-        └── getter methods
+## ✨ Fitur
 
-Contoh Penggunaan Fitur Utama
-1. Melihat Daftar Film
-    ===========================================================
-                    DAFTAR FILM YANG SEDANG TAYANG
-    ===========================================================
-    No   | Judul                | Genre     | Harga    
-    -----------------------------------------------------------
-    1    | Venom 3              | Action    | Rp 50,000
-    2    | Inside Out 2         | Animation | Rp 45,000
-    3    | Conjuring 4          | Horror    | Rp 55,000
+- 📺 **Lihat Daftar Film** - Menampilkan film yang sedang tayang beserta harga
+- 🎫 **Pesan Tiket** - Proses pemesanan tiket dengan pilihan film, jadwal, dan jumlah
+- 📊 **Rekap Pemesanan** - Melihat semua transaksi yang telah dilakukan
+- 💰 **Sistem Diskon** - Diskon 10% untuk pembelian lebih dari 3 tiket
+- ⏰ **Variasi Harga** - Harga berbeda berdasarkan jam tayang (Siang, Sore, Malam)
+- 🔄 **Menu Interaktif** - Navigasi yang mudah dengan sistem menu berulang
 
-2. Memesan Tiket
-    Masukkan nama Anda: Adrian
 
-    Pilih Film:
-    1. Venom 3               | Action    | Rp 50,000
-    2. Inside Out 2          | Animation | Rp 45,000
-    3. Conjuring 4           | Horror    | Rp 55,000
-    Nomor film: 2
+## 🏗️ Diagram Class
 
-    Pilih Jadwal Tayang:
-    1. 12:00 (Siang)    | Harga x1.0
-    2. 15:30 (Sore)     | Harga x1.1
-    3. 19:00 (Malam)    | Harga x1.2
-    Nomor jadwal: 3
+### Struktur Class:
 
-    Masukkan jumlah tiket: 4
+**BioskopApp** (Main Class)
+- Mengelola: `Film[] daftarFilm`
+- Mengelola: `Jadwal[] daftarJadwal`  
+- Mengelola: `ArrayList<Pemesanan> riwayatPemesanan`
+- Methods: `main()`, sistem menu
 
-    PEMESANAN BERHASIL!
-    =========================================
-    =           DETAIL PEMESANAN            =
-    =========================================
-    Nama Pelanggan : Adrian
-    Film           : Inside Out 2
-    Jadwal Tayang  : 19:00 (Malam)
-    Jumlah Tiket   : 4
-    Total Bayar    : Rp 194,400
+**Film** Class
+- Attributes: 
+  - `String judul`
+  - `String genre` 
+  - `double hargaDasar`
+- Methods:
+  - `getJudul()`, `getGenre()`, `getHargaDasar()`
+  - `getInfoFilm()`
 
-3. Melihat Rekap Pemesanan
-    ================================================================================
-                                    REKAP PEMESANAN
-    ================================================================================
-    No | Nama           | Film           | Jadwal         | Jumlah | Total     
-    --------------------------------------------------------------------------------
-    1  | Adrian         | Inside Out 2   | 19:00 (Malam)  | 4      | Rp 194,400
-    --------------------------------------------------------------------------------
-    Total Pemesanan : 1
-    ================================================================================
+**Jadwal** Class  
+- Attributes:
+  - `String jamTayang`
+  - `double faktorHarga`
+- Methods:
+  - `getJamTayang()`, `getFaktorHarga()`
+  - `getInfoJadwal()`
 
-Petunjuk Cara Menjalankan Program
-Prasyarat:
-- Java Development Kit (JDK) 8 atau lebih tinggi
-- Text editor atau IDE (VS Code, IntelliJ IDEA, Eclipse, dll.)
+**Pemesanan** Class
+- Attributes:
+  - `String namaPelanggan`
+  - `Film film` (Composition)
+  - `Jadwal jadwal` (Composition)
+  - `int jumlahTiket`
+  - `static final double DISKON = 0.1`
+- Methods:
+  - `hitungTotalBayar()`
+  - `getDetailPemesanan()`
+  - Getter methods
 
-Langkah-langkah:
-1. Buat struktur folder project:
-    Tiket_Bioskop/
-    │
-    ├── src/
-    │   └── main/
-    │       └── java/
-    │           └── com/
-    │               └── bioskop/
-    │                   ├── BioskopApp.java      # Main class
-    │                   ├── Film.java            # Class untuk data film
-    │                   ├── Jadwal.java          # Class untuk jadwal tayang
-    │                   └── Pemesanan.java       # Class untuk transaksi
-    │
-    ├── README.md
-    └── pom.xml                                  # Maven configuration
+### Relasi Antar Class:
+- **BioskopApp** memiliki **Film** dan **Jadwal** (Association)
+- **Pemesanan** terdiri dari **Film** dan **Jadwal** (Composition)  
+- **BioskopApp** mengumpulkan **Pemesanan** (Aggregation)
 
-    - src/main/java/com/bioskop/BioskopApp.java - Class utama yang menjalankan aplikasi
-    - src/main/java/com/bioskop/Film.java - Class yang merepresentasikan data film
-    - src/main/java/com/bioskop/Jadwal.java - Class yang mengatur jadwal tayang dan faktor harga
-    - src/main/java/com/bioskop/Pemesanan.java - Class untuk menangani transaksi pemesanan
-    - pom.xml - File konfigurasi Maven untuk dependencies dan build settings
-    - README.md - Dokumentasi project (file ini)
+## 📊 Contoh Output
 
-2. Compile semua file Java:
-   javac com/bioskop/*.java
+### 1. Menu Utama
 
-3. Jalankan program:
-   java com.bioskop.BioskopApp
+SELAMAT DATANG DI BIOSKOP ADRIAN XXI
+ 
+1. Lihat Daftar Film
+2. Pesan Tiket
+3. Lihat Rekap Pemesanan
+4. Keluar
+   
+Pilih menu (1-4): 
+
+
+### 2. Daftar Film
+
+DAFTAR FILM YANG SEDANG TAYANG
+
+No  | Judul          | Genre      | Harga
+1   | Venom 3        | Action     | Rp 50,000
+2   | Inside Out 2   | Animation  | Rp 45,000
+3   | Conjuring 4    | Horror     | Rp 55,000
+
+
+### 3. Proses Pemesanan
+
+Masukkan nama Anda: Adrian
+
+Pilih Film:
+1. Venom 3 | Action | Rp 50,000
+2. Inside Out 2 | Animation | Rp 45,000
+3. Conjuring 4 | Horror | Rp 55,000
+
+Nomor film: 2
+
+Pilih Jadwal Tayang:
+1. 12:00 (Siang)  | Harga x1.0
+2. 15:30 (Sore)   | Harga x1.1
+3. 19:00 (Malam)  | Harga x1.2
+
+Nomor jadwal: 3
+Masukkan jumlah tiket: 4
+
+PEMESANAN BERHASIL!
+
+### 4. Detail Pemesanan
+DETAIL PEMESANAN
+
+Nama Pelanggan  : Adrian
+Film            : Inside Out 2
+Jadwal Tayang   : 19:00 (Malam)
+Jumlah Tiket    : 4
+Total Bayar     : Rp 194,400
+
+### 5. Rekap Semua Pemesanan
+                          REKAP PESANAN
+No  | Nama    | Film         | Jadwal        | Jumlah | Total
+1   | Adrian  | Inside Out 2 | 19:00 (Malam) | 4      | Rp 194,400
+2   | Sarah   | Venom 3      | 15:30 (Sore)  | 2      | Rp 110,000
+3   | Budi    | Conjuring 4  | 12:00 (Siang) | 1      | Rp 55,000
+
+Total Pemesanan : 3
+
+
+## 🚀 Cara Menjalankan
+
+```bash
+# Compile
+javac src/main/java/com/bioskop/*.java
+
+# Run
+java -cp src/main/java com.bioskop.BioskopApp
